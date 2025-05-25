@@ -6,7 +6,7 @@ import CareerChartModel from "../model/CareerModel";
 
 export const findCareer = async (req: Request, res: Response) => {
   try {
-    console.log("object")
+  
     const {
       educationLevel,
       skills,
@@ -79,7 +79,7 @@ export const findCareer = async (req: Request, res: Response) => {
 
     const orgChart = JSON.parse(cleanText);
     const data = await CareerChartModel.create(orgChart)
-    console.log(data)
+ 
 
     res.json({ success: true, orgChart });
 
